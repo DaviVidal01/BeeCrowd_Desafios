@@ -4,6 +4,7 @@
 ## 🙋‍♂️ Profile
 **- Problemas:** [Minhas Soluções](https://www.beecrowd.com.br/judge/pt/profile/915702) <br>
 **- Estatísticas:** [Meus Status](https://www.beecrowd.com.br/judge/pt/users/statistics/915702) <br>
+**- Pontos:** [Meus Pontos](https://www.beecrowd.com.br/judge/pt/points) <br>
 <img src="readme-assets/perfil/progress-simple.png" alt="Progress-Simple">
 
 ## 🏅 Conquistas
