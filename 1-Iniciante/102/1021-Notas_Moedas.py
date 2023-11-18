@@ -8,18 +8,25 @@ Imprima a quantidade mínima de notas e moedas necessárias para trocar o valor 
 
 Obs: Utilize ponto (.) para separar a parte decimal.'''
 
-N = float(input())
-notas = [100, 50, 20, 10, 5, 2]
-moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.010]
+valor = float(input())
+centavos = int(valor * 100)
+
+cedulas = [10000, 5000, 2000, 1000, 500, 200]
+moedas = [100, 50, 25, 10, 5, 1]
+
+qtd_notas = [0] * len(cedulas)
+qtd_moedas = [0] * len(moedas)
+
+for i in range(len(cedulas)):
+    qtd_notas[i], centavos = divmod(centavos, cedulas[i])
+
+for i in range(len(moedas)):
+    qtd_moedas[i], centavos = divmod(centavos, moedas[i])
 
 print("NOTAS:")
-for nota in notas:
-    qtd_notas = int(N // nota)
-    print(f"{qtd_notas} nota(s) de R$ {nota:.2f}")
-    N %= nota 
+for i in range(len(cedulas)):
+    print(f"{qtd_notas[i]} nota(s) de R$ {cedulas[i]/100:.2f}")
 
 print("MOEDAS:")
-for moeda in moedas:
-    qtd_moedas = int(N // moeda)
-    print(f"{qtd_moedas} moeda(s) de R$ {moeda:.2f}")
-    N %= moeda  
+for i in range(len(moedas)):
+    print(f"{qtd_moedas[i]} moeda(s) de R$ {moedas[i]/100:.2f}")
